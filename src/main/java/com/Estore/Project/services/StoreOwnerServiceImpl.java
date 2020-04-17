@@ -22,7 +22,8 @@ public class StoreOwnerServiceImpl implements StoreOwnerService {
         return new ApiResponse(200,"Registered Successfully",storeOwner);
     }
 
-    public ApiResponse customerLogIn(String username, String password) {
+    @Override
+    public ApiResponse storeOwnerLogIn(String username, String password) {
         List<StoreOwner> storeOwners = storeOwnerRepository.findByuserName(username);
         if (storeOwners.size()==1)
         {

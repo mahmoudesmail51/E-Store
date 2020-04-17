@@ -34,4 +34,9 @@ public class StoreOwnerController
     {
         return storeOwnerService.RegisterStoreOwner(storeOwner);
     }
+    @GetMapping("/login/{username}/{password}")
+    public ApiResponse storeOwnerLogIn (@PathVariable String username , @PathVariable String password)
+    {
+        return storeOwnerService.storeOwnerLogIn(username,password);
+    }
 }
