@@ -18,4 +18,5 @@ public class Admin
     private String lastName;
     private String userName;
     private String password;
+    private boolean loggedIn = false;
 }

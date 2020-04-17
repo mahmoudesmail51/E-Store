@@ -33,6 +33,12 @@ public class CustomerController
      {
         return customerService.RegisterCustomer(customer);
      }
+     @GetMapping("/login/{username}/{password}")
+     public ApiResponse CustomerLogin (@PathVariable String username , @PathVariable String password)
+     {
+         return customerService.customerLogIn(username,password);
+     }
+
 
 
 

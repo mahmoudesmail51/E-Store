@@ -24,8 +24,6 @@ public class StoreOwner
     private String userName;
     @Column(name = "Password")
     private String password;
-
-
-
+    private boolean loggedIn = false;
 
 }

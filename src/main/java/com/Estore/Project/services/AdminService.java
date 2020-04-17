@@ -17,4 +17,7 @@ public interface AdminService
     List<Customer> getAllCustomer();
 
     List<StoreOwner> getAllStoreOwners();
+
+
+
 }

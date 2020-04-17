@@ -10,6 +10,8 @@ public interface CustomerService
 {
     ApiResponse RegisterCustomer(Customer customer);
 
+    ApiResponse customerLogIn (String username, String password);
+
 
 
 }
