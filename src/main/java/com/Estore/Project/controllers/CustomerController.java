@@ -38,12 +38,4 @@ public class CustomerController
      {
          return customerService.customerLogIn(username,password);
      }
-
-
-
-
-
-
-
-
 }

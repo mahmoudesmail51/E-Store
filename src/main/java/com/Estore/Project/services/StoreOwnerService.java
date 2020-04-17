@@ -6,4 +6,5 @@ import com.Estore.Project.models.StoreOwner;
 public interface StoreOwnerService
 {
     ApiResponse RegisterStoreOwner(StoreOwner storeOwner);
+    ApiResponse storeOwnerLogIn (String username, String password);
 }
