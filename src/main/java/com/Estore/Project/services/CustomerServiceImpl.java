@@ -20,10 +20,25 @@ public class CustomerServiceImpl implements CustomerService {
     {
         //Signed-in token enabled
        customerRepository.save(customer);
-       return new ApiResponse(200,"success",customer);
+       return new ApiResponse(200,"Registered Successfully",customer);
     }
 
-
-
-
+    @Override
+    public ApiResponse customerLogIn(String username, String password) {
+        List<Customer> customers = customerRepository.findByUsername(username);
+        if (customers.size()==1)
+        {
+            if (customers.get(0).getPassword().equals(password))
+            {
+                customers.get(0).setLoggedIn(true);
+                return new ApiResponse(200,"Logged in Successfully",customers.get(0));
+            }
+            else
+                return new ApiResponse(0,"Wrong Password",null);
+        }
+        else
+        {
+            return new ApiResponse(200,"Username Not Found",null);
+        }
+    }
 }
