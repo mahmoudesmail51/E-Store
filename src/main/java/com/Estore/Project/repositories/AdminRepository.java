@@ -8,5 +8,5 @@ import java.util.List;
 @Repository
 public interface AdminRepository extends JpaRepository<Admin,Integer>
 {
-    List<Admin> findByUsername(String username);
+    List<Admin> findByuserName(String username);
 }

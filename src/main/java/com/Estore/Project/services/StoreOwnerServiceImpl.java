@@ -23,7 +23,7 @@ public class StoreOwnerServiceImpl implements StoreOwnerService {
     }
 
     public ApiResponse customerLogIn(String username, String password) {
-        List<StoreOwner> storeOwners = storeOwnerRepository.findByUsername(username);
+        List<StoreOwner> storeOwners = storeOwnerRepository.findByuserName(username);
         if (storeOwners.size()==1)
         {
             if (storeOwners.get(0).getPassword().equals(password))

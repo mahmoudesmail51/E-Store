@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface StoreOwnerRepository extends JpaRepository<StoreOwner,Integer>
 {
-    List<StoreOwner> findByUsername(String username);
+    List<StoreOwner> findByuserName(String username);
 }

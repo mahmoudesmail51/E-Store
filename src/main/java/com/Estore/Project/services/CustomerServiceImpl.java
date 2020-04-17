@@ -25,7 +25,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public ApiResponse customerLogIn(String username, String password) {
-        List<Customer> customers = customerRepository.findByUsername(username);
+        List<Customer> customers = customerRepository.findByuserName(username);
         if (customers.size()==1)
         {
             if (customers.get(0).getPassword().equals(password))
